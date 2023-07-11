@@ -12,9 +12,9 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', '4011894'))
-API_HASH = environ.get('API_HASH', '56ac06547b5d8af50493e104feed8053')
-BOT_TOKEN = environ.get('BOT_TOKEN', "1781582444:AAFwYhaplG_1YUk_rjrlJN-3XeHxniyaPQc")
+API_ID = int(environ.get('API_ID', '23104044'))
+API_HASH = environ.get('API_HASH', 'f02a56885f32a83417b2b266d18473a8')
+BOT_TOKEN = environ.get('BOT_TOKEN', "6388550170:AAHIXJZAN2tgAbhDYrFIE5ectAgNdu7YZIY")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -22,23 +22,23 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 PICS = (environ.get('PICS', 'https://telegra.ph/file/32627d1bb8303070694fd.jpg https://telegra.ph/file/d2be74e19ff39ad0e04ed.jpg https://telegra.ph/file/5b14b5a77e0e70fa389d5.jpg https://telegra.ph/file/33850db4bfb95fbd764e7.jpg https://telegra.ph/file/57480f01e2aa20e1b882d.jpg https://telegra.ph/file/94f3540420e200de4649a.jpg https://telegra.ph/file/a1d8b86ff4586df043325.jpg https://telegra.ph/file/39c8400e47efec3718459.jpg https://telegra.ph/file/9f5a7d04c67972b41e994.jpg https://telegra.ph/file/78501ede09af36c54b3ed.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '739667270').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001587407813 -1001586815337 -1001517177583 -1001704828885 -1001661137244 -1001506224651 -1001303828522 -1001352972147 -1001418560093 -1001476352943 -1001587647928').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5980613692').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001729800108').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL', '-1001528080426')
+auth_channel = environ.get('AUTH_CHANNEL', '-1001650508234')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://JD:JD@cluster0.8s1sr05.mongodb.net/?retryWrites=true&w=majority")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://fsclecture:yuvraj178@cluster0.rt7bwpq.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "fsclecture")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001555083458'))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'freakersmoviel')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001972152639'))
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'MoviesandWebseriesrequestgroup1')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)
@@ -49,7 +49,7 @@ LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "True"),
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
-FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).split()]
+FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1001660689741')).split()]
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "False")), True)
@@ -68,8 +68,8 @@ LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
     
       # URL Shortener #
 
-URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'atglinks.com')
-URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '2948014f60b7700cbc5bca4a6b241b31f1ccd39c')
+URL_SHORTENR_WEBSITE = environ.get('URL_SHORTNER_WEBSITE', 'Mdiskshortner.link')
+URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', 'd9a38b0289a28e5d06747e6248400cea05e7ba05')
 
      # Auto Delete For Group Message (Self Delete) #
 SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 3600))
